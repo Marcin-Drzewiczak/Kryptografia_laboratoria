@@ -27,6 +27,18 @@ def power_naive(n: int, k: int, b: int):
     return b
 
 
+def power_binary_list(x, k, n):
+    temp_list = list(reversed([int(i) for i in list('{0:0b}'.format(k))]))
+    y = 1
+    i = len(temp_list) - 1
+    while i >= 0:
+        y = ( y ** 2 ) % n
+        if temp_list[i] == 1:
+            y = (y * x) % n
+        i = i -1
+    return y
+
+
 if __name__ == "__main__":
 
     t0 = time.perf_counter()
@@ -43,3 +55,8 @@ if __name__ == "__main__":
     t1 = time.perf_counter()
     print("power naive: %s" % (t1 - t0))
 
+    t0 = time.perf_counter()
+    for i in range(1, 10000000):
+        power_binary_list(i, 2, 13)
+    t1 = time.perf_counter()
+    print("power binary list: %s" % (t1 - t0))
