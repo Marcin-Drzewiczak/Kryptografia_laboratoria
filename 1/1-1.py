@@ -22,10 +22,3 @@ if __name__ == "__main__":
     print(generate_random(5))
     print(generate_random(5))
     print(generate_random(5))
-
-    print(generate_random_oneliner(5))
-    print(generate_random_oneliner(5))
-    print(generate_random_oneliner(5))
-    print(generate_random_oneliner(5))
-    print(generate_random_oneliner(5))
-    print(generate_random_oneliner(5))

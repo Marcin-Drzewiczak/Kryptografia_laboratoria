@@ -4,6 +4,7 @@ jest liczbą pierwszą. Wykorzystaj test Fermata
 Dane:n∈N
 Wynik:True jeśli n jest liczbą pierwszą, False w przeciwnym wypadku.
 """
+import time
 
 
 def power_alg(n: int, k: int, b: int):
@@ -21,8 +22,16 @@ def prime_little_fermat_theorem(x):
 if __name__ == "__main__":
     print(prime_little_fermat_theorem(4))
     print(prime_little_fermat_theorem(5))
+    print(prime_little_fermat_theorem(6))
     print(prime_little_fermat_theorem(23450069))
     print(prime_little_fermat_theorem(23451569))
     print(prime_little_fermat_theorem(23460641))
     print(prime_little_fermat_theorem(23459981))
     print(prime_little_fermat_theorem(23459651))
+
+    print("prime little fermat theorem test: started")
+    t0 = time.perf_counter()
+    for i in range(1, 1000000):
+        prime_little_fermat_theorem(i)
+    t1 = time.perf_counter()
+    print("prime little fermat theorem: %s" % (t1 - t0))
