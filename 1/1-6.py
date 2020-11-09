@@ -20,7 +20,6 @@ def prime_little_fermat_theorem(n: int, k: int = 100):
 
     for _ in random.sample(range(2, n-1), k):
         a = power_binary_list(_, n - 1, n)
-        # a = pow(_, n-1) % n
         if a != 1:
             return False
     return True
