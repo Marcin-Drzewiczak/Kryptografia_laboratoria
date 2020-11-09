@@ -36,10 +36,8 @@ def modular_sqrt(a, p):
             result1 = power_binary_list(a, int((p+1) / 4), p)
             result2 = p - result1
         else:
-            # raise Exception("not a modular sqrt")
             return "not a modular sqrt"
     else:
-        # raise Exception("not a p % 4 == 3")
         return "not a p % 4 == 3"
     return result1, result2
 
