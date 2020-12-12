@@ -8,7 +8,7 @@ Wynik:True jeśli n jest liczbą pierwszą, False w przeciwnym wypadku.
 import random
 
 
-def prime_little_fermat_theorem(n: int, k: int = 100):
+def prime_little_fermat_theorem(n, k: int = 100):
     if n == 2:
         return True
 
