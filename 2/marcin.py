@@ -1,6 +1,3 @@
-# MARCIN DRZEWICZAK
-# 434676
-
 import random
 import time
 import math
